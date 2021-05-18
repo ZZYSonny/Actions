@@ -1,0 +1,16 @@
+name: Cling Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+          architecture: 'x64'
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
